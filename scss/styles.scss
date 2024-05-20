@@ -1,7 +1,12 @@
-$primary-color: #3498db;
+$primary-color: #4C5FD5;
+$secondary-color: #dadbf1;
+$white: #fff;
+$black: #000000;
 
 body {
   font-family: Arial, sans-serif;
   background-color: $primary-color;
   color: #fff;
+  margin: 0;
+  box-sizing: border-box;
 }
