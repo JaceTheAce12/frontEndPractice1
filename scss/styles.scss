@@ -1,12 +1,168 @@
 $primary-color: #4C5FD5;
 $secondary-color: #dadbf1;
+$button-color: #191a1b;
 $white: #fff;
 $black: #000000;
+$mainFont: "GT America Standard", serif;
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: $primary-color;
+  font-family: $mainFont;
+  background-color: $white;
   color: #fff;
   margin: 0;
   box-sizing: border-box;
+
+  header {
+    background-color: $black;
+    padding: .2rem;
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 1rem;
+        #leftNav {
+            display: flex;
+            align-items: center;
+            #logo {
+                padding: 1rem;
+                width: 126px;
+            }
+           #dividingLine {
+            font-size: 2rem;
+           }
+            a#helpLink {
+                text-decoration: none;
+                color: $white;
+                padding: 1rem;
+                font-size: 24px;
+            }
+            a#helpLink:hover {
+                text-decoration: underline;
+            }
+        }
+        #rightNav {
+            #submit {
+                border: solid 1px $white;
+                border-radius: 8px;
+                padding: 6px 22px;
+                font-size: 24px;
+                color: $white;
+                background-color: $button-color;
+                margin-right: 1rem;
+            }
+            #submit:hover {
+                cursor: pointer;
+            }
+            #signIn {
+                border: none;
+                border-radius: 8px;
+                padding: 6px 22px;
+                font-size: 24px;
+                background-color: $primary-color;
+                color: white;
+            }
+            #signIn:hover {
+                background-color: $white;
+                color: black;
+                cursor: pointer;
+                transition: ease-in-out 0.3s;
+            }
+        }
+    }
+  }
+
+  main {
+    .helpSection {
+        background-color: $secondary-color;
+        margin: auto;
+        text-align: center;
+        padding: 80px 30px 115px;
+        h1 {
+            color: $black;
+            margin: 0;
+            font-size: 80px;
+            margin-bottom: 1rem;
+        }
+        #searchInput {
+            padding: 1rem;
+            max-width: 700px;
+            border-radius: 4px;
+        }
+    }
+
+    .contentSection {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        color: black;
+        
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            width: 100%;
+            padding: 1rem;
+            justify-content: start;
+            
+            div#contentContainer {
+                display: flex;
+                padding: 1rem;
+                max-width: 500px;
+                img {
+                    max-width: 100px;
+                    width: 100%;
+                    padding: 1rem;
+                    margin-right: 1rem;
+                }
+                h1 {
+                    font-size: 24px;
+                }
+                p {
+                    font-size: 24px;
+                }
+                a {
+                    font-size: 20px;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+  }
+
+  footer {
+    background-color: $black;
+    margin: auto;
+    .footerContainer {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: start;
+        max-width: 1200px;
+        #footerLinks {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            .column {
+                display: flex;
+                flex-direction: column;
+                margin: 1rem;
+                h1 {
+                    margin-bottom: 1rem;
+                }
+                a {
+                    text-decoration: none;
+                    color: white;
+                }
+                p {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    #footerInfo {
+        display: flex;
+        flex-direction: column;
+        img {
+            width: 100%;
+            max-width: 150px;
+        }
+    }
+  }
 }

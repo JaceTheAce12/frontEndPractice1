@@ -10,12 +10,13 @@
     <header>
         <nav>
             <div id="leftNav">
-                <img src="./assets/abstractLogo.svg" alt="abstractLogo">
-                <h3>Help Center</h3>
+                <img src="./assets/abstractLogo.svg" alt="abstractLogo" id="logo">
+                <div id="dividingLine">|</div>
+                <a href="#" id="helpLink">Help Center</a>
             </div>
             <div id="rightNav">
-                <button>Submit Request</button>
-                <button>Sign In</button>
+                <button id="submit">Submit Request</button>
+                <button id="signIn">Sign In</button>
             </div>
         </nav>
     </header>
@@ -25,6 +26,54 @@
             <h1>How can we help?</h1>
             <input type="text" id="searchInput" placeholder="Search">
         </section>
+
+        <section class="contentSection">
+            <div class="content">
+
+            </div>
+        </section>
     </main>
+
+    <footer>
+        <div class="footerContainer">
+            <div id="footerLinks">
+                <div class="column"> 
+                    <h1>Abstract</h1>
+                    <a href="#">Branches</a>
+                </div>
+                <div class="column"> 
+                    <h1>Resources</h1>
+                    <a href="#">Blog</a>
+                    <a href="#">Help Center</a>
+                    <a href="#">Release Notes</a>
+                    <a href="#">Status</a>
+                </div>
+                <div class="column"> 
+                    <h1>Community</h1>
+                    <a href="#">Twitter</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">Dribbble</a>
+                    <a href="#">Podcast</a>
+                </div>
+                <div class="column"> 
+                    <h1>Company</h1>
+                    <a href="#">About Us</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Legal</a>
+                    
+                    <p>Contact Us</p>
+                    <a href="#">info@abstract.com</a>
+                </div>
+            </div>
+        </div>
+        <div id="footerInfo">
+            <img src="./assets/footerLogo.svg" alt="footerLogo">
+            <p>© Copyright 2023</p>
+            <p>Abstract Studio Design, Inc.</p>
+            <p>All rights reserved</p>
+        </div>
+    </footer>
+<script src="./js/app.js"></script>
 </body>
 </html>
