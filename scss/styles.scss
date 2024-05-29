@@ -3,12 +3,14 @@ $secondary-color: #dadbf1;
 $button-color: #191a1b;
 $white: #fff;
 $black: #000000;
+$font: "Archivo", sans-serif;
 
 body {
   background-color: $white;
   color: #fff;
   margin: 0;
   box-sizing: border-box;
+  font-family: $font;
 
   header {
     background-color: $black;
@@ -22,9 +24,15 @@ body {
         #leftNav {
             display: flex;
             align-items: center;
-            #logo {
+            svg {
                 padding: 1rem;
                 width: 126px;
+                fill: white;
+            }
+            svg:hover {
+                cursor: pointer;
+                fill: darken(white, 20%);
+                transition: ease-in-out 0.3s;
             }
            #dividingLine {
             font-size: 2rem;
@@ -70,6 +78,34 @@ body {
     }
   }
 
+  #helpBtn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    background-color: $primary-color;
+    border: none;
+    color: $white;
+    padding: 13px 22px;
+    letter-spacing: 0.6;
+    font-size: 1.07143rem;
+    border-radius: 999rem;
+    justify-content: center;
+    align-items: center;
+    span {
+        padding-right: 8px;
+        padding-top: 4px;
+        img {
+            width: 23px;
+            max-width: 30px;
+        }
+    }
+  }
+
+  #helpBtn:hover {
+    cursor: pointer;
+  }
+
   main {
     .helpSection {
         background-color: $secondary-color;
@@ -87,18 +123,28 @@ body {
             border-color: rgb(139, 130, 116);
             outline-color: initial;
             box-shadow: rgba(6, 6, 6, 0.1) 0px 9px; 
-            width: 720px;
+            max-width: 720px;
             margin-top: 20px;
             padding: 1rem;
             border: 0.5px solid #000000;
             border-radius: 4px;
             outline: none;
+            font-size: 24px;
+            width: 100%;
+            margin: auto;
         }
+        #searchInput:hover {
+            border: #4C5FD5 1px solid;
+        }
+        #searchInput[type=text]:focus {
+            border: #4C5FD5 1px solid;
+          }
     }
 
     .contentSection {
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
         margin: auto;
         color: black;
         .content {
@@ -108,12 +154,8 @@ body {
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
-            flex-direction: row;
             padding: 0;
-            max-width: 1240px;
-            margin-left: auto;
-            margin-right: auto;
-            
+            margin: auto;
             div#contentContainer {
                 margin-top: 10px;
                 height: 250px;
@@ -121,7 +163,8 @@ body {
                 display: flex;
                 flex-direction: row;
                 align-items: center;
-                margin-bottom: 80px;
+                margin-bottom: 40px;
+                justify-content: space-around;
                 #imgContainer {
                     display: flex;
                     justify-content: space-around;
@@ -139,10 +182,21 @@ body {
                     text-align: left;
                     font-size: 24px;
                     word-spacing: 1px;
-                    padding: 15px 8px;
+                    h1 {
+                        font-size: 24px;
+                        padding: 0;
+                    }
+                    p {
+                        margin: 0;
+                        font-size: 24px;
+                    }
                     a {
                         font-size: 20px;
                         text-decoration: none;
+                        color: #4C5FD5;
+                    }
+                    a:hover {
+                        text-decoration: underline;
                     }
                 }
             }
@@ -152,6 +206,7 @@ body {
 
   footer {
     display: flex;
+    flex-wrap: wrap;
     background-color: $black;
     margin: auto;
     padding: 1rem;
@@ -163,8 +218,8 @@ body {
         max-width: 1440px;
         flex-direction: row;
         #footerLinks {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
+            display: flex;
+            flex-wrap: wrap;
             .column {
                 display: flex;
                 flex-direction: column;
@@ -175,6 +230,7 @@ body {
                 a {
                     text-decoration: none;
                     color: white;
+                    margin: .3rem;
                 }
                 a:hover {
                     text-decoration: underline;
@@ -201,7 +257,7 @@ body {
             p {
                 font-size: 20px;
                 padding: 0;
-                margin: 0;
+                margin: .3rem;
             }
         }
     }

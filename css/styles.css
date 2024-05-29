@@ -3,6 +3,7 @@ body {
   color: #fff;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Archivo", sans-serif;
 }
 body header {
   background-color: #000000;
@@ -19,9 +20,15 @@ body header nav #leftNav {
   display: flex;
   align-items: center;
 }
-body header nav #leftNav #logo {
+body header nav #leftNav svg {
   padding: 1rem;
   width: 126px;
+  fill: white;
+}
+body header nav #leftNav svg:hover {
+  cursor: pointer;
+  fill: #cccccc;
+  transition: ease-in-out 0.3s;
 }
 body header nav #leftNav #dividingLine {
   font-size: 2rem;
@@ -61,6 +68,32 @@ body header nav #rightNav #signIn:hover {
   cursor: pointer;
   transition: ease-in-out 0.3s;
 }
+body #helpBtn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  background-color: #4C5FD5;
+  border: none;
+  color: #fff;
+  padding: 13px 22px;
+  letter-spacing: 0.6;
+  font-size: 1.07143rem;
+  border-radius: 999rem;
+  justify-content: center;
+  align-items: center;
+}
+body #helpBtn span {
+  padding-right: 8px;
+  padding-top: 4px;
+}
+body #helpBtn span img {
+  width: 23px;
+  max-width: 30px;
+}
+body #helpBtn:hover {
+  cursor: pointer;
+}
 body main .helpSection {
   background-color: #dadbf1;
   margin: auto;
@@ -78,16 +111,26 @@ body main .helpSection #searchInput {
   border-color: rgb(139, 130, 116);
   outline-color: initial;
   box-shadow: rgba(6, 6, 6, 0.1) 0px 9px;
-  width: 720px;
+  max-width: 720px;
   margin-top: 20px;
   padding: 1rem;
   border: 0.5px solid #000000;
   border-radius: 4px;
   outline: none;
+  font-size: 24px;
+  width: 100%;
+  margin: auto;
+}
+body main .helpSection #searchInput:hover {
+  border: #4C5FD5 1px solid;
+}
+body main .helpSection #searchInput[type=text]:focus {
+  border: #4C5FD5 1px solid;
 }
 body main .contentSection {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   margin: auto;
   color: black;
 }
@@ -98,11 +141,8 @@ body main .contentSection .content {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  flex-direction: row;
   padding: 0;
-  max-width: 1240px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
 }
 body main .contentSection .content div#contentContainer {
   margin-top: 10px;
@@ -111,7 +151,8 @@ body main .contentSection .content div#contentContainer {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
+  justify-content: space-around;
 }
 body main .contentSection .content div#contentContainer #imgContainer {
   display: flex;
@@ -130,14 +171,26 @@ body main .contentSection .content div#contentContainer #contentText {
   text-align: left;
   font-size: 24px;
   word-spacing: 1px;
-  padding: 15px 8px;
+}
+body main .contentSection .content div#contentContainer #contentText h1 {
+  font-size: 24px;
+  padding: 0;
+}
+body main .contentSection .content div#contentContainer #contentText p {
+  margin: 0;
+  font-size: 24px;
 }
 body main .contentSection .content div#contentContainer #contentText a {
   font-size: 20px;
   text-decoration: none;
+  color: #4C5FD5;
+}
+body main .contentSection .content div#contentContainer #contentText a:hover {
+  text-decoration: underline;
 }
 body footer {
   display: flex;
+  flex-wrap: wrap;
   background-color: #000000;
   margin: auto;
   padding: 1rem;
@@ -151,8 +204,8 @@ body footer .footerContainer {
   flex-direction: row;
 }
 body footer .footerContainer #footerLinks {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
 }
 body footer .footerContainer #footerLinks .column {
   display: flex;
@@ -165,6 +218,7 @@ body footer .footerContainer #footerLinks .column h1 {
 body footer .footerContainer #footerLinks .column a {
   text-decoration: none;
   color: white;
+  margin: 0.3rem;
 }
 body footer .footerContainer #footerLinks .column a:hover {
   text-decoration: underline;
@@ -190,5 +244,5 @@ body footer .footerContainer #footerInfo img {
 body footer .footerContainer #footerInfo p {
   font-size: 20px;
   padding: 0;
-  margin: 0;
+  margin: 0.3rem;
 }/*# sourceMappingURL=styles.css.map */
