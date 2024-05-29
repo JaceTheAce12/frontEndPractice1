@@ -15,7 +15,7 @@ async function getContent() {
                 <div id="imgContainer">
                     <img src="${element.imagePath}" alt="${element.altText}">
                 </div>
-                <div>
+                <div id="contentText">
                     <h1>${element.title}</h1>
                     <p>${element.description}</p>
                     <a href="#">${element.linkText}</a>

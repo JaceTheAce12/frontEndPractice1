@@ -3,10 +3,8 @@ $secondary-color: #dadbf1;
 $button-color: #191a1b;
 $white: #fff;
 $black: #000000;
-$mainFont: "GT America Standard", serif;
 
 body {
-  font-family: $mainFont;
   background-color: $white;
   color: #fff;
   margin: 0;
@@ -14,12 +12,13 @@ body {
 
   header {
     background-color: $black;
-    padding: .2rem;
+    padding: .6rem;
     nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: 1rem;
+        margin: auto;
+        max-width: 1240px;
         #leftNav {
             display: flex;
             align-items: center;
@@ -84,9 +83,16 @@ body {
             margin-bottom: 1rem;
         }
         #searchInput {
-            padding: 1rem;
-            max-width: 700px;
             border-radius: 4px;
+            border-color: rgb(139, 130, 116);
+            outline-color: initial;
+            box-shadow: rgba(6, 6, 6, 0.1) 0px 9px; 
+            width: 720px;
+            margin-top: 20px;
+            padding: 1rem;
+            border: 0.5px solid #000000;
+            border-radius: 4px;
+            outline: none;
         }
     }
 
@@ -95,33 +101,49 @@ body {
         justify-content: center;
         margin: auto;
         color: black;
-        
         .content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
             width: 100%;
-            padding: 1rem;
-            justify-content: start;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            flex-direction: row;
+            padding: 0;
+            max-width: 1240px;
+            margin-left: auto;
+            margin-right: auto;
             
             div#contentContainer {
+                margin-top: 10px;
+                height: 250px;
+                width: 45%;
                 display: flex;
-                padding: 1rem;
-                max-width: 500px;
-                img {
-                    max-width: 100px;
-                    width: 100%;
-                    padding: 1rem;
-                    margin-right: 1rem;
+                flex-direction: row;
+                align-items: center;
+                margin-bottom: 80px;
+                #imgContainer {
+                    display: flex;
+                    justify-content: space-around;
+                    img {
+                        max-width: 100px;
+                    }
                 }
-                h1 {
+                #contentText {
+                    height: 100%;
+                    width: 70%;
+                    display: flex;
+                    flex-direction: column;
+                    line-height: 1.3em;
+                    justify-content: space-evenly;
+                    text-align: left;
                     font-size: 24px;
-                }
-                p {
-                    font-size: 24px;
-                }
-                a {
-                    font-size: 20px;
-                    text-decoration: none;
+                    word-spacing: 1px;
+                    padding: 15px 8px;
+                    a {
+                        font-size: 20px;
+                        text-decoration: none;
+                    }
                 }
             }
         }
@@ -129,13 +151,17 @@ body {
   }
 
   footer {
+    display: flex;
     background-color: $black;
     margin: auto;
+    padding: 1rem;
     .footerContainer {
         display: flex;
         flex-wrap: nowrap;
-        justify-content: start;
-        max-width: 1200px;
+        justify-content: space-evenly;
+        margin: auto;
+        max-width: 1440px;
+        flex-direction: row;
         #footerLinks {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -150,18 +176,33 @@ body {
                     text-decoration: none;
                     color: white;
                 }
+                a:hover {
+                    text-decoration: underline;
+                }
                 p {
                     font-weight: bold;
                 }
             }
         }
-    }
-    #footerInfo {
-        display: flex;
-        flex-direction: column;
-        img {
-            width: 100%;
-            max-width: 150px;
+        #footerInfo {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            margin-top: auto;
+            height: 100%;
+            padding-left: 150px;
+            padding-bottom: 50px;
+            padding-right: 10px;
+            img {
+                width: 100%;
+                max-width: 150px;
+                margin-bottom: 20px;
+            }
+            p {
+                font-size: 20px;
+                padding: 0;
+                margin: 0;
+            }
         }
     }
   }
