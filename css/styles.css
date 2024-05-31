@@ -245,4 +245,15 @@ body footer .footerContainer #footerInfo p {
   font-size: 20px;
   padding: 0;
   margin: 0.3rem;
+}
+
+@media only screen and (max-width: 40.063em) {
+  #rightNav {
+    display: none;
+  }
+}
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+  #rightNav {
+    display: none;
+  }
 }/*# sourceMappingURL=styles.css.map */
